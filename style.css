@@ -1,0 +1,151 @@
+/* Configurações gerais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  background-color: #F4F6F9;
+  color: #1E293B;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  background-color: #0F4C81;
+  color: #FFFFFF;
+  padding: 32px 0;
+  text-align: center;
+  border-bottom: 4px solid #093154;
+}
+
+.cabecalho h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.cabecalho p {
+  font-size: 18px;
+}
+
+/* Seção de introdução e imagem */
+.introducao {
+  margin-top: 28px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.introducao img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #CBD5E1;
+  margin-bottom: 16px;
+}
+
+/* Organização dos cards em colunas (Computador) */
+.grade-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Estilo individual de cada card */
+.card {
+  background-color: #FFFFFF;
+  border: 2px solid #CBD5E1;
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h2 {
+  font-size: 21px;
+  color: #0F4C81;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #E2E8F0;
+}
+
+.card p {
+  margin-bottom: 14px;
+}
+
+.card .objetivo {
+  background-color: #F1F5F9;
+  border-left: 4px solid #0F4C81;
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+/* Botão no final da página */
+.area-botao {
+  text-align: center;
+  margin-top: 36px;
+  margin-bottom: 40px;
+}
+
+.botao {
+  display: inline-block;
+  background-color: #0F4C81;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 16px 28px;
+  border-radius: 8px;
+  border: 2px solid #093154;
+}
+
+.botao:hover,
+.botao:focus {
+  background-color: #093154;
+  outline: 3px solid #D97706;
+  outline-offset: 3px;
+}
+
+/* Rodapé */
+.rodape {
+  background-color: #E2E8F0;
+  color: #1E293B;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 2px solid #CBD5E1;
+  font-size: 15px;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 900px) {
+  .grade-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsividade para celulares (cards um abaixo do outro) */
+@media (max-width: 600px) {
+  .cabecalho h1 {
+    font-size: 24px;
+  }
+
+  .grade-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .botao {
+    width: 100%;
+    text-align: center;
+  }
+}
